@@ -1,0 +1,590 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0b182f;
+    color: #63ffda;
+    font-family: 'popins', sans-serif;
+    width: 100%;
+}
+nav {
+    z-index: 9999; 
+    background-color: #0b182f;
+    color: #fff;
+    padding: 25px 0;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #63ffda;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav ul li a:hover {
+    color: #63ffda; /* Change color on hover */
+}
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+h1, h2 {
+    color: #63ffda;
+}
+.home {
+    display: flex;
+    justify-content: space-between; /* Aligns items horizontally with space between them */
+    align-items: flex-start; /* Aligns items to the start of the container vertically */
+    position: relative; /* Makes sure the absolute positioning inside this container is relative to this container */
+    padding: 20px;
+  }
+.intro-container {
+    max-width: 600px; /* Set a maximum width for better readability */
+    margin: 50px 20px;/* Center the container horizontally */
+    height: 510px; 
+    padding: 20px; /* Add some padding for spacing */
+    background-color: #0b182f; /* Light background color */
+    color: #7c7b81; /* Dark text color */
+    flex: 1; 
+}
+
+.intro-container p {
+    margin-bottom: 5px; /* Add some spacing between paragraphs */
+    text-align: left; /* Align text to the left */
+}
+#intro {
+    color: #63ffda; 
+    margin-bottom: -42px;
+    font-size: 20px;
+}
+.intro-container h1 {
+    margin-bottom: 10px; /* Add some spacing between paragraphs */
+    text-align: left; /* Align text to the left */
+    color: #fff;
+    font-size: 65px;
+}
+.blob-container {
+    position: absolute; /* Positions the blob relative to the nearest positioned ancestor (the home section) */
+    right: 300px; /* Aligns the blob to the right side of the container */
+    top: 28%; /* Positions the blob vertically in the middle of the container */
+    transform: translateY(-50%); /* Centers the blob vertically */
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    /* Add other styling properties for the blob */
+    z-index: 1; /* Ensures the blob is above other elements if needed */
+  }
+
+.blob-photo {
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    object-fit: cover;
+    border-radius: 50%;
+    animation: blob-animation 5s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+    box-shadow: 0.8px 0.8px 1px 1px #63ffda;
+}
+
+@keyframes blob-animation {
+    0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; 
+    }
+}
+.button-social-container {
+    display: flex;
+    align-items: center;
+    justify-content: start; /* Align items to the left */
+    gap: 20px; /* Space between the button and social icons */
+}
+
+.button-28 {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid #63ffda;
+    border-radius: 28px;
+    box-sizing: border-box;
+    color: #63ffda;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    padding: 16px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    width: auto;
+    will-change: transform;
+}
+  
+.button-28:disabled {
+    pointer-events: none;
+}
+  
+.button-28:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+  
+.button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
+#social-test {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+  
+.social {
+    padding-left: 0px;
+    display: flex;
+    list-style-type: none;
+    gap: 10px; /* Space between social icons */
+}
+  
+.social li {
+    color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    cursor: pointer;
+    transition: ease .3s;
+    /* border-radius: 50%; */
+}
+  
+.social li:hover {
+    color: rgba(167, 146, 129, 1);
+    border: 1px solid rgba(167, 146, 129, 1);
+}
+
+.social:hover > li {
+    opacity: 0.5;
+}
+  
+.social:hover > li:hover {
+    opacity: 1;
+}
+.social a {
+    color: inherit; /* Ensure the icon inherits the color of the li */
+    text-decoration: none; /* Remove underline from the link */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #63ffda; /* Color of the line */
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-bottom: 35px;
+    margin-left: 55px;/* Margin top and bottom to create a gap */
+}
+#education {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh; /* Adjust as needed */
+    color: #fff;
+}
+.edu {
+    max-width: 600px; /* Adjust as needed */
+}
+#clgsite {
+    text-decoration: none;
+    color: inherit;
+}
+.marklist {
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 2px 2px 4px #63ffda;
+    font-weight: bold;
+    font-size: 18px;
+}
+.skills {
+    padding: 20px;
+}
+
+.skill-box1 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0b182f; /* Light background color */
+    width: 1000px;
+    margin-left: 230px;
+    border-radius: 10px;
+    height: 100px;
+    border: 2px solid #63ffda;
+}
+
+.skill {
+    background-color: #f0f0f0; /* Background color of the box */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding inside the box */
+    margin: 30px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #63ffda;
+}
+.skill1 {
+    background-color: #f0f0f0; /* Background color of the box */
+    color: #333; /* Text color */
+    padding: 10px 20px; /* Padding inside the box */
+    margin: 30px; /* Margin between boxes */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #63ffda;
+    margin-left: 220px;
+}
+.skill-box2 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0b182f;
+    width: 1000px;
+    margin-left: 230px;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 200px;
+    border: 2px solid #63ffda;
+}
+.skill-box3 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0b182f;
+    width: 1000px;
+    margin-left: 230px;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 200px;
+    border: 2px solid #63ffda;
+}
+.skill-box4 {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0b182f;
+    width: 1000px;
+    margin-left: 230px;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 100px;
+    border: 2px solid #63ffda;
+}
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit; /* Inherit text color */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-size: cover; /* Ensures the background image covers the entire box */
+    background-position: center; /* Centers the background image */
+}
+
+.project-box:hover {
+    transform: scale(1.1);
+}
+ .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.project-title1, .project-title2 {
+    font-size: 16px; /* Adjust size for longer names */
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 90%; /* Limit the width to avoid overflow */
+    text-wrap: wrap;
+}
+
+.project1 {
+    background-image: url('Images/bcv.jpeg');
+
+}
+.project2 {
+    background-image: url('Images/schoolmanagement.jpeg');
+}
+
+.project3 {
+    background-image: url('Images/qrimg.jpg');
+}
+
+.project4 {
+    background-image: url('Images/text-speech.jpg');
+}
+
+.project5 {
+    background-image: url('Images/portfolio.png');
+}
+
+.project6 {
+    background-image: url('Images/musicplayer.jpg');
+}
+
+.project7 {
+    background-image: url('Images/agecalc.jpg');
+}
+.project8 {
+    background-image: url('Images/flames.jpg');
+}
+.project9 {
+    background-image: url('Images/todolist.jpg');
+}
+.project10 {
+    background-image: url('Images/comingsoon.jpeg');
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #0b182f;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #63ffda;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 150px;
+}
+
+button[type="submit"] {
+    background-color: #0b182f;
+    color: #fff;
+    border: 2px solid #63ffda;
+    padding: 10px 20px;
+    border-radius: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #63ffda;
+    color: #0b182f;
+}
+body {
+    /*width: 100%;*/
+    margin-bottom: 100px;
+}
+.center {
+    display: table;
+    width: 120%;
+    height: 100vh;
+}
+footer {
+    background-color: #0b182f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: -85px;
+    width: 100%;
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 600px) {
+    /* Global Styles */
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    
+    /* Navigation Bar */
+    nav {
+        padding: 15px 0; /* Reduce padding for mobile */
+        margin-top: 17px;
+        font-size: 20px;
+    }
+    nav ul li {
+        /* display: block; Stack the navigation items vertically */
+        margin: 10px 20px; /* Adjust margin for stacked items */
+    }
+    nav ul li a {
+        font-size: 20px; /* Adjust font size for links */
+    }
+    
+    /* Home Section */
+    .home {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 10px; /* Adjust padding */
+    }
+    .intro-container {
+        max-width: 100%; /* Full width for mobile screens */
+        margin: 20px; /* Reduce margin */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px; /* Adjust padding */
+    }
+    .blob-container {
+        right: 0;
+        top: 15%;
+        width: 190px;
+        height: 150px;
+    }
+    .blob-photo {
+        width: 150px; /* Adjust as needed */
+        height: 150px; /* Adjust as needed */
+        object-fit: cover;
+        border-radius: 50%;
+        animation: blob-animation 5s ease-in-out infinite;
+        transition: all 1s ease-in-out;
+        box-shadow: 0.8px 0.8px 1px 1px #63ffda;
+    }
+    
+    /* Button and Social Icons */
+    .button-social-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .button-28 {
+        font-size: 14px; /* Adjust font size */
+        padding: 10px 15px; /* Adjust padding */
+        margin-top: 13px;
+    }
+    #social-test {
+        font-size: 24px; /* Adjust font size for social icons */
+    }
+    .social li {
+        width: 40px; /* Adjust width */
+        height: 40px; /* Adjust height */
+    }
+    
+    /* Section Divider */
+    .section-divider {
+        margin: 50px 20px; /* Adjust margins */
+    }
+    
+    /* Education Section */
+    #education {
+        height: auto; /* Allow height to adjust based on content */
+    }
+    
+    /* Skill Boxes */
+    .skill-box1,
+    .skill-box2,
+    .skill-box3,
+    .skill-box4 {
+        width: 100%; 
+        margin-left: 0; 
+        margin-top: 15px;
+        padding-bottom: 10px;
+        height: auto; 
+    }
+    .skill {
+        margin: 15px; /* Adjust margin */
+        margin-left: 10px;
+    }
+    .skill1 {
+        margin: 15px; /* Adjust margin */
+        margin-left: 10px;
+    }
+    
+    /* Project Boxes */
+    .project-box {
+        width: 100%; /* Full width */
+    }
+    .project-title,
+    .project-title1,
+    .project-title2 {
+        font-size: 20px; /* Adjust font size */
+        padding: 5px; /* Adjust padding */
+    }
+    
+    /* Contact Form */
+    #contact-form {
+        max-width: 100%; /* Full width */
+        padding: 10px; /* Adjust padding */
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 18px; /* Adjust font size */
+    }
+    button[type="submit"] {
+        font-size: 15px; /* Adjust font size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px 0; /* Adjust padding */
+        font-size: 18px; /* Adjust font size */
+    }
+}
