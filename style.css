@@ -468,39 +468,58 @@ footer {
     
     /* Navigation Bar */
     nav {
-        padding: 15px 0; /* Reduce padding for mobile */
-        margin-top: 17px;
-        font-size: 20px;
+        padding: 22px 0; 
+        margin-top: 0px;
+        font-size: 25px;
+        padding-left: 0px;
     }
     nav ul li {
-        /* display: block; Stack the navigation items vertically */
-        margin: 10px 20px; /* Adjust margin for stacked items */
+        margin: 0px 6px; /* Adjust margin for stacked items */
     }
     nav ul li a {
-        font-size: 20px; /* Adjust font size for links */
+        font-size: 14px; /* Adjust font size for links */
     }
     
     /* Home Section */
     .home {
         flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center align items */
+        /* align-items: center; Center align items */
         padding: 10px; /* Adjust padding */
     }
     .intro-container {
         max-width: 100%; /* Full width for mobile screens */
-        margin: 20px; /* Reduce margin */
+        margin-left: 0px; /* Reduce margin */
+        margin-top: 0;
         height: auto; /* Allow height to adjust based on content */
-        padding: 10px; /* Adjust padding */
+        padding: 2px; /* Adjust padding */
+    }
+    .intro-container p {
+        margin-bottom: 0px; /* Add some spacing between paragraphs */
+        text-align: left; /* Align text to the left */
+    }
+    #intro {
+        color: #63ffda; 
+        margin-top: 38px;
+        margin-bottom: -42px;
+        font-size: 15px;
+    }
+    .intro-container h1 {
+        margin-top: 60px;
+        margin-bottom: 10px; /* Add some spacing between paragraphs */
+        text-align: left; /* Align text to the left */
+        color: #fff;
+        font-size: 38px;
     }
     .blob-container {
         right: 0;
-        top: 15%;
-        width: 190px;
-        height: 150px;
+        margin-right: 20px;
+        top: 17.5%;
+        width: 100px;
+        height: 100px;
     }
     .blob-photo {
-        width: 150px; /* Adjust as needed */
-        height: 150px; /* Adjust as needed */
+        width: 110px; /* Adjust as needed */
+        height: 130px; /* Adjust as needed */
         object-fit: cover;
         border-radius: 50%;
         animation: blob-animation 5s ease-in-out infinite;
@@ -515,8 +534,9 @@ footer {
     }
     .button-28 {
         font-size: 14px; /* Adjust font size */
-        padding: 10px 15px; /* Adjust padding */
-        margin-top: 13px;
+        padding: 0px 15px; /* Adjust padding */
+        margin-top: 20px;
+        min-height: 50px;
     }
     #social-test {
         font-size: 24px; /* Adjust font size for social icons */
@@ -585,6 +605,6 @@ footer {
     /* Footer */
     footer {
         padding: 15px 0; /* Adjust padding */
-        font-size: 18px; /* Adjust font size */
+        font-size: 16px; /* Adjust font size */
     }
 }
